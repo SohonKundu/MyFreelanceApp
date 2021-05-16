@@ -2,14 +2,14 @@ version: 0.2
 
 env:
   variables:
-    JAVA_HOME: "/usr/lib/jvm/java-11-openjdk-amd64"
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
 
 phases:
   install:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
-      - apt-get install -y openjdk-11-jdk
+      - apt-get install -y openjdk-8-jdk
       - apt-get install -y maven
     finally:
       - echo This always runs even if the update or install command fails 
